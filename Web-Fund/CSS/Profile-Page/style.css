@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: helvetica;
+}
+a{
+    color: #0c5394;
+}
+ul{
+    display: flex;
+}
+li{
+    list-style: none;
+    margin-left: 20px;
+}
+button{
+    background-color: #17a2b8;
+    color: white;
+    height: 30px;
+    width: 100px;
+    border: 0px;
+}
+.navbar{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;    
+    height: 50px;
+}
+.navleft{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navlink{
+    text-decoration: none;
+    color: white;
+}
+
+.main{
+    display: flex;
+    justify-content: space-around;
+}
+.mainleft{
+    flex:2;
+    margin-right: 25px;
+    margin-left: 150px;
+}
+.mainright{
+    flex: 1;
+    margin-right: 150px;
+}
+.contact, .education, .requests, .connections{
+    border: 1px solid grey;
+    margin-top: 25px;
+}
+.contacthead{
+    background-color: #17a2b8;
+    height: 100px;
+}
+#me{
+    position: relative;
+    top: 50px;
+    left: 50px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+.contactbody{
+    padding-top: 55px;
+    padding-left: 50px;
+    padding-bottom: 25px;
+}
+.icon{
+    height: 25px;
+}
+.setting .icon{
+    margin-left: -3px;
+}
+.loc, .setting
+{
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+}
+.info{
+    margin-top: 10px;
+}
+#numreq{
+    border: 1px solid black;
+    background-color: grey;
+    border-radius: 50%;
+    min-width:25px;
+    line-height: 25px;
+    text-align: center;
+    margin-right: 10px;
+    color: black;
+}
+.eduhead, .reqhead, .connectionhead{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    height: 50px;
+    background-color: #333333;
+    color: white;
+    padding-left: 25px;
+}
+.edubody *, .reqbody, .connectionbody{
+    padding: 0 25px 10px;
+    margin-top: 5px;
+}
+#dates{
+    color: grey;
+}
+#numconn{
+    border: 1px solid black;
+    background-color: grey;
+    border-radius: 50%;
+    min-width: 45px;
+    line-height: 35px;
+    text-align: center;
+    margin-right: 10px;
+    color: black;
+}
+
+.reqhead, .connection{
+    padding-right: 15px;
+}
+
+.reqbody{
+    display: flex;
+    flex-direction: column;
+}
+.userrequest, .user{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+.uicon{
+    height: 25px;
+    margin-right: 15px;
+    border-radius: 50%;
+}
+.reaction{
+    display: flex;
+    margin-top: 5px;
+    align-items: center;
+    gap: 5px;
+}
+.connectionbody .user{
+    justify-content: flex-start;
+}
+.connfoot{
+    display: flex;
+    align-items: center;
+    border-top:1px solid grey;
+    height: 25px;
+    padding-left: 25px;
+    
+}

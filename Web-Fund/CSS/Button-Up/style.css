@@ -1,0 +1,35 @@
+#search{
+    display: block;
+    border: solid #00D1B2;
+    color: #00D1B2;
+    background-color: white;
+    border-radius: 25px;
+    width: 200px;
+    height: 35px;
+    font-size: 150%;
+    margin: 50px
+}
+
+#add{
+    display: block;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: #00D1B2;
+    border: solid #00D1B2;
+    color: white;
+    font-size: 150%;
+    margin: 50px;
+}
+
+#account{
+    display: block;
+    width: 250px;
+    height: 50px;
+    font-size: 150%;
+    color: white;
+    background-color: #2b78e4;
+    border: solid 3px  black;
+    box-shadow: 5px 5px 0px black;
+    margin: 50px;
+}

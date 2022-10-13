@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to pet shelter</h1>
+    <img src="./img/cat.jpeg" alt="picture of cat">
+    <h2>Add your pet here:</h2>
+    <form action="#">
+        <div>
+            <label for="name">Pet Name:</label>
+            <input type="text" name="name" id="name">
+        </div>
+        <div>
+            <label for="type">Pet Type:</label>
+            <select name="type" id="type">
+                <option value="Dog">Dog</option>
+                <option value="Cat">Cat</option>
+                <option value="Dragon">Dragon</option>
+                <option value="Fish">Fish</option>
+            </select>
+        </div>
+        <div>
+            <label for="friendly">Friendly?</label>
+            <input type="checkbox" name="checkbox" id="yes" checked>
+            <label for="yes">Yes</label>
+            <input type="checkbox" name="checkbox" id="no">
+            <label for="no">No</label>
+        </div>
+        <div>
+            <label for="Birthday">Birthday:</label>
+            <input type="date" name="Birthday" id="Birthday">
+        </div>
+    </form>
+    <h2>New pets up for adoption</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Friendly</th>
+            <th>Birthday</th>
+        </tr>
+        <tr>
+            <td>Toby</td>
+            <td>Dog</td>
+            <td>Yes</td>
+            <td>09/19/2018</td>
+        </tr>
+        <tr>
+            <td>Ottie</td>
+            <td>Dog</td>
+            <td>Yes</td>
+            <td>10/10/2022</td>
+        </tr>
+        <tr>
+            <td>Roger</td>
+            <td>Dragon</td>
+            <td>No</td>
+            <td>01/20/1680</td>
+        </tr>
+        <tr>
+            <td>Gary</td>
+            <td>Cat</td>
+            <td>Yes</td>
+            <td>10/10/2019</td>
+        </tr>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+}
+/* Header Content */
+.header{
+    background-color: #119B9D;
+    color: white;
+    padding: 15px 0px;
+    border-bottom: 5px solid black;
+}
+.upper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.upperleft{
+    flex:1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px 0px;
+    margin-left: 15%;
+}
+img{
+    margin-right: 15px;
+}
+.upperright{
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 15%;
+}
+ul{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px;
+    list-style: none;
+    align-items: center;
+}
+li{
+    margin-left: 50px;
+    font-size: 25px;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+.lowermain{
+    display: flex;
+    justify-content: space-around;
+}
+.lowerleft{
+    display: flex;
+    flex: 1;
+    margin-left: 15%;
+}
+select, input, button{
+    padding: 5px 25px;
+    border: 2px solid black;
+}
+label{
+    padding: 0 25px;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+}
+.icon{
+    height: 50px;
+    margin-left: -15px;
+}
+#find{
+    background-color: #9900FF;
+    color: white;
+    box-shadow: 2px 2px 0px black;
+}
+    .lowerright{
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 15%;
+}
+#donate{
+    color: #9900FF;
+    border: 2px solid #9900FF;
+    width: 100px;
+    height: 50px;
+    margin-left: 50px;
+    padding: 0;
+    border-radius: 45%;
+    font-weight:900;
+    font-size: larger;
+}
+
+/* Main Body Content */
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.top, .mid, .bottom{
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    margin-top: 15px;
+    padding:25px;
+    border-radius: 15px;
+} 
+.top, .bottom{
+    background-color: #eeeeee;
+}
+.mid{
+    background-color: #dddddd;
+}
+.animalimg{
+    height: 100px;
+}
+.left{
+    display: flex;
+    justify-content: flex-start;
+    flex: 1;
+}
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    flex:4;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex:2;
+    align-items:flex-end;
+}
+.pets{
+    display: flex;
+    justify-content:space-around;
+    margin-right: 10px;
+    gap: 5px;
+
+}
+.petanimal{
+    width: 85%;
+    background-color: #17CFD1;
+    color: white;
+    font-size: large;
+    border: 2px solid black;
+    box-shadow: 2px 2px 0px black;
+}

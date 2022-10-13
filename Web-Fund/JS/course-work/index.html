@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JS TEST AREA</title>
+</head>
+<body>
+    <h1 onclick="hide(this)">this is a test heading</h1>
+    <div class="row">
+        <button onclick="console.clear()">Clear Console</button>
+        <button onclick="conalert('Warning! Danger!')"">Danger!</button>
+        <button onclick="example(this)">This Test</button>
+        <button onclick="test(this)">Change Me</button>
+        <button onclick="changeThat()" onmouseover="removeShadow(this)" onmouseout="addShadow(this)">Change That</button>
+    </div>
+    <div class="hidethem">
+        <img onclick="hide(this)" src="./imgs/orange.png" alt="Clyde">
+        <img onclick="hide(this)" src="./imgs/blue.png" alt="Inky">
+        <img onclick="hide(this)" src="./imgs/pink.png" alt="Pinky">
+        <img onclick="hide(this)" src="./imgs/red.png" alt="Blinky">
+    </div>
+    <div class="row">
+        <div class="note" onmouseover="addShadow(this)" onmouseout="removeShadow(this)">I am a note</div>
+        <div class="note" onmouseover="addShadow(this)" onmouseout="removeShadow(this)">I am a note</div>
+        <div class="note" onmouseover="addShadow(this)" onmouseout="removeShadow(this)">I am a note</div>
+        <div class="note" onmouseover="addShadow(this)" onmouseout="removeShadow(this)">I am a note</div>
+        <div class="note" onmouseover="addShadow(this)" onmouseout="removeShadow(this)">I am a note</div>
+        <div class="note" onmouseover="addShadow(this)" onmouseout="removeShadow(this)">I am a note</div>
+    </div>
+    <div>
+        <button class='' onclick="darkness(this)">Dark Mode Activate</button>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>

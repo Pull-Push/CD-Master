@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+h1, h3{
+    text-align: center;
+    font-family: Helvetica;
+    color: steelblue;
+    padding-top: 20px;
+}
+
+.top, .mid, .bottom {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px;
+    padding: 20px;
+}
+
+h1{
+    font-size: 300%;
+}
+
+img{
+    height: 200px;
+}
+
+.top{
+    background-color: #1C6758;
+}
+.mid{
+    background-color: #3D8361;
+}
+.bottom{
+    background-color: #D6CDA4;
+}
