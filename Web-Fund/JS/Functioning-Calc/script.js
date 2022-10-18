@@ -1,37 +1,38 @@
 //Use following code snippets
 var displayDiv = document.querySelector("#display");
 displayDiv.innerText = 0;
+eqArray = [0,0];
 
-var eq = []
-function press(num){
-    if(displayDiv.innerText==0){
-        displayDiv.innerText=" ";
-        displayDiv.innerText += num; 
-    }else{
-        displayDiv.innerText += num;
-    }
-    x = Number(displayDiv.innerText)
-    // console.log(x)
-    return x;
-}
 function clr(){
+    eqArray = [0,0];
     displayDiv.innerText = 0;
-    eq = []
+}
 
+function press(num){
+    if(displayDiv.innerText == 0){
+        displayDiv.innerText = ""
+        displayDiv.innerText = displayDiv.innerText + num;
+    }else{
+        displayDiv.innerText = displayDiv.innerText + num;
+    }
 }
 
 function setOP(op){
-    eq.push(Number(x));
+    eqArray[0] = Number(displayDiv.innerText);
+    oper = op;
     displayDiv.innerText = 0;
-    y = op;
-    return y;
 }
 
 function calculate(){
-    eq.push(Number(x))
-    // console.log(eq[0]);
-    // console.log(y);
-    // console.log(eq[1]);
-    answer = ${eq[0]}${y}${eq[1]};
-    console.log(answer)
+    eqArray[1] = Number(displayDiv.innerText);
+    if (oper == "+" ){
+        answer = Number(eqArray[0])+Number(eqArray[1]);
+        }else if(oper == "-"){
+        answer = Number(eqArray[0])-Number(eqArray[1]);
+        }else if(oper == "*"){
+        answer = Number(eqArray[0])*Number(eqArray[1]);
+        }else{
+        answer = Number(eqArray[0])/Number(eqArray[1]);
+    }
+    displayDiv.innerText = answer;
 }
