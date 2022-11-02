@@ -8,7 +8,7 @@ def countdown(num):
         num -= 1
     print(cd_list)
 
-#countdown(10)
+countdown(10)
 
 
 #< 2-Print and Return - Create a function that will receive a list with two numbers. Print the first value and return the second.
@@ -17,7 +17,7 @@ def print_And_Return(list):
     print(list[0])
     return list[1]
 
-#print(print_and_return([45,32]))
+print(print_And_Return([45,32]))
 
 
 
@@ -26,7 +26,7 @@ def print_And_Return(list):
 
 def f_Plus_L(list):
     return list[0] + len(list)
-#print(f_plus_l([10,5,46,85,32]))
+print(f_Plus_L([10,5,46,85,32]))
 
 
 #< 4-Values Greater than Second - Write a function that accepts a list and creates a new list containing only the values from the original list that are greater than its 2nd value. Print how many values this is and then return the new list. If the list has less than 2 elements, have the function return False
@@ -47,3 +47,10 @@ print(val_Great_Sec([10,50,36,78,65,12,85,78,98]))
 
 #< 5-This Length, That Value - Write a function that accepts two integers as parameters: size and value. The function should create and return a list whose length is equal to the given size, and whose values are all the given value.
 
+def lenval(x,y):
+    new_list = []
+    for num in range(x):
+        new_list.append(y)
+    return new_list
+
+print(lenval(4,2))
