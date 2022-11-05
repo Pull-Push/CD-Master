@@ -1,13 +1,20 @@
+from bank_account import SavingsBankAccount
+from bank_account import CheckingBankAccount
+
 class User:
     is_rewards_member = False
     
     def __init__(self,first_name,last_name,email,age):
+        
         self.first_name = first_name
         self.last_name = last_name
         self.email = email
         self.age = age
         self.is_rewards_member = False
         self.gold_card_points = 0
+        self.savings = SavingsBankAccount()
+        self.checking = CheckingBankAccount()
+
     
     def display_info(self):
         print("First Name:", self.first_name)
@@ -39,21 +46,41 @@ class User:
             print("You Don't Have Enough Points")
             print("Balance:", self.gold_card_points)
 
+    def make_deposit(self,account = "", amount = 0):
+        if account == "savings":
+            self.savings.deposit(amount)
+        elif account == "checking":
+            self.checking.deposit(amount)
+        else:
+            print("Please Specify an Account")
+    
+    
+    def make_withdrawl(self,account = "", amount = 0):
+        if account == "savings":
+            self.savings.withdraw(amount)
+        elif account == "checking":
+            self.checking.withdraw(amount)
+        else:
+            print("Please Specify an Account")
 
-user1 = User("Peter","Parker","PParker@dailybugle.com",24)
-user2 = User("Eddie", "Brock", "DieSpiderMan@gmail.com", 27)
-user3 = User("Wilson","Fisk", "DontCallMeKingpin@Fisk.com", 45)
+    def display_user_balance(self):
+        self.checking.display_account_info()
+        self.savings.display_account_info()
 
+    def transfer_money(self, amount, other_user):
+        pass
+        self.checking.balance -= amount
+        other_user.checking.balance += amount
 
+EBrock = User("Eddie", "Brock", "DieSpiderMan@gmail.com", 27)
+WFisk = User("Wilson","Fisk", "DontCallMeKingpin@Fisk.com",45)
+PParker = User("Peter","Parker","PParker@dailybugle.com",24)
 
+PParker.make_deposit("savings",500)
+PParker.make_deposit('checking', 1000)
+PParker.display_user_balance()
 
-# user1.display_info()
-# user2.display_info()
-# user3.display_info()
+PParker.transfer_money(200, WFisk)
 
-#user1.enroll()
-# print(user1.enroll())
-
-
-#user1.spend_points(20)
-#user1.spend_points(500)
+WFisk.display_user_balance()
+PParker.display_user_balance()
