@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .box{
+            border: 5px solid black;
+            margin: 20px;
+            height: 200px;
+            min-width: 200px;
+        }
+    </style>
+    <title>Playgounds</title>
+</head>
+<body>
+    {% for x in range(0, times):%}
+        <div class="box" style="background-color:{{color}}";></div>
+    {% endfor %}
+</body>
+</html>
