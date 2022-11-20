@@ -1,0 +1,40 @@
+body{
+    font-family: helvetica;
+    width: 100%;
+}
+h1{
+    padding-top: 20px;
+    text-align: center;
+    color: antiquewhite;
+}
+form, .wrapper{
+    text-align: left;
+    color: antiquewhite;
+    margin: 0 auto;
+    width: 66%;
+    background-color: darkslategrey;
+    padding-bottom: 20px;
+
+}
+label, input,select,textarea,p, h2{
+    font-size: x-large;
+    margin-right: 10px;
+    display: block;
+    margin-left: 15%;
+    margin-top: 10px;
+}
+
+.button{
+    margin-top: 20px ;
+    background-color: darkgrey;
+    color: antiquewhite;
+    border: none;
+}
+
+#gbb{
+    margin: 0 auto;
+}
+
+span, h2{
+    color: white;
+}
