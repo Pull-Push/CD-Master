@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+}
+
+body{
+    text-align: center;
+    background-color: darkgray;
+}
+.goldtotal, .turn, .new, .forms, .results{
+    margin-top: 25px;
+}
+.goldtotal p{
+    color: gold;
+    font-size: xx-large;
+}
+.turn p{
+    font-size: xx-large;
+    color: antiquewhite;
+}
+#newbutton{
+    height: 50px;
+    background-color: black;
+    color: red;
+    font-size: x-large;
+    padding: 0px 10px;
+}
+
+.forms{
+    margin: 0 auto;
+    width:66%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    
+}
+
+.forms form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px;
+    width: 150px;
+    border: 1px solid black;
+    box-shadow: 15px 15px 10px  black;
+    background-color: lightgray;
+
+}
+label{
+    font-size: x-large;
+    color: darkslategray;
+    margin-top: 5px;
+}
+input{
+    border: none;
+    font-weight: bold;
+    font-size: large;
+    background-color: black;
+    color: antiquewhite;
+    margin-top: 10px;
+    height: 33%;
+}
+h3{
+    text-align: center;
+
+}
+.results{
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto;
+    padding: 0 5px;
+    background-color: lightgrey;
+    box-shadow: 15px 15px 10px  black;
+}
+
+li{
+    list-style: none;
+    font-size: larger;
+    margin-top: 10px ;
+}
+.red{
+    color: red;
+}
+.green{
+    color: green;
+}

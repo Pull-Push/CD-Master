@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Ninja Gold</title>
+</head>
+<body>
+    <div class="goldtotal">
+        <h2>Your Gold:</h2>
+        <p>{{session['gold_total']}}</p>
+    </div>
+    <div class="turn">
+        <h2>Turn Count</h2>
+        <p>{{TC|safe}}</p>
+    </div>
+    <div class="new">
+        <form action="/clear">
+            {{new_button|safe}}
+        </form>
+    </div>
+    <div class="forms">
+        <form action='/process' method="post">
+            <label for="farm">Farm</label>
+            <input type="hidden" name="loc" value="farm">
+            <input type="submit" value="Find Gold">
+        </form>
+        <form action="/process" method="post">
+            <label for="cave">Cave</label>
+            <input type="hidden" name="loc" value="cave">
+            <input type="submit" value="Find Gold">
+        </form>
+        <form action="/process" method="post">
+            <label for="House">House</label>
+            <input type="hidden" name="loc" value="house">
+            <input type="submit" value="Find Gold">
+        </form>
+        <form action="/process" method="post">
+            <label for="casino">Casino</label>
+            <input type="hidden" name="loc" value="casino">
+            <input type="submit" value="Find Gold">
+        </form>
+    </div>            
+    
+    <h3/>Activites</h3>
+        <div class="results">
+            {% for (act,color) in zip(list,rorg): %}
+                <ul>
+                    <li class={{color}}>{{act}}</li>
+                </ul>
+            {% endfor %}
+        </div>
+        
+</body>
+</html>
