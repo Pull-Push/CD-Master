@@ -3,3 +3,14 @@ Web-Fund/JS/Dojo-Pizza/solution.js
 Python/Core-Assignments/nested_dic_solut.py
 Python/mysql/erd/flaskNov.mwb
 Python/fundamentals/oop/users_with_bank_accounts-Jeff-Sokol.zip
+Python/flask-mysql/burgers/burger.py
+Python/flask-mysql/burgers/burgers_erd.mwb
+Python/flask-mysql/burgers/mysqlconnection.py
+Python/flask-mysql/burgers/Pipfile
+Python/flask-mysql/burgers/Pipfile.lock
+Python/flask-mysql/burgers/server.py
+Python/flask-mysql/burgers/static/css/style.css
+Python/flask-mysql/burgers/templates/details_page.html
+Python/flask-mysql/burgers/templates/edit_page.html
+Python/flask-mysql/burgers/templates/index.html
+Python/flask-mysql/burgers/templates/results.html
