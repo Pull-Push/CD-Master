@@ -15,4 +15,3 @@ class testClass:
     @classmethod
     def democlassmethod(cls):
         pass
-    # a
