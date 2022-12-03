@@ -19,9 +19,41 @@ class User:
         return users
     
     @classmethod
+    def show_one(cls,userid):
+        data = {
+            'id' : userid
+            }
+        query = "SELECT * from users WHERE id = %(id)s;"
+        results = connectToMySQL('users_schema').query_db(query,data)
+        singleUser = []
+        singleUser.append(results)
+        return singleUser[0]
+
+    @classmethod
     def add_user(cls,data):
         # print(data)
         query = "INSERT INTO users(first_name, last_name, email) VALUES(%(first_name)s, %(last_name)s, %(email)s);"
         results = connectToMySQL('users_schema').query_db(query,data)
-        
+        return results
+
+    @classmethod
+    def edituser(cls, id, data):
+        editData = {
+            'id':id,
+            'first_name': data['first_name'],
+            'last_name': data['last_name'],
+            'email' : data['email']
+        }
+        print(editData)
+        query = "UPDATE users SET first_name = %(first_name)s, last_name = %(last_name)s, email = %(email)s WHERE id = %(id)s;"
+        results = connectToMySQL('users_schema').query_db(query,editData)
+        return results
+
+    @classmethod
+    def deleteuser(cls, id):
+        data = {
+            'id':id
+        }
+        query = "DELETE FROM users WHERE id = %(id)s;"
+        results = connectToMySQL('users_schema').query_db(query,data)
         return results

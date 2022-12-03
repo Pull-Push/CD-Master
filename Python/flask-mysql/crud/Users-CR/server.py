@@ -4,6 +4,13 @@ from user import User
 app=Flask(__name__)
 app.secret_key = "this might work"
 
+@app.route('/show/<int:user_id>')
+def show_one(user_id):
+    single = User.show_one(user_id)
+    print(single[0])
+
+    return render_template ('show.html', user = single[0])
+
 @app.route('/')
 def show_all():
     users = User.get_all_users()
@@ -12,6 +19,7 @@ def show_all():
 @app.route('/create')
 def create():
     return render_template('create.html')
+
 
 @app.route('/process', methods=['POST'])
 def process_data():
@@ -22,8 +30,32 @@ def process_data():
         'last_name': info['last_name'],
         'email':info['email']
     }
-    User.add_user(newUser)
+    results = User.add_user(newUser)
+    return redirect('/show/'+str(results))
+
+@app.route('/edit/<int:user_id>')
+def edit_page(user_id):
+    single = User.show_one(user_id)
+    return render_template('edit.html',user = single[0])
+
+
+@app.route('/changeMe/<int:user_id>', methods=['POST'])
+def edit_user(user_id):
+    id= user_id
+    info = request.form
+    editUser = {
+        'first_name': info['first_name'],
+        'last_name': info['last_name'],
+        'email':info['email']
+    }
+    User.edituser(id, editUser)
+    return redirect('/show/'+str(id))
+
+@app.route('/delete/<int:user_id>')
+def deleteUser(user_id):
+    User.deleteuser(user_id)
     return redirect('/')
+
 
 if __name__=="__main__":
     app.run(debug=True, port=5001)

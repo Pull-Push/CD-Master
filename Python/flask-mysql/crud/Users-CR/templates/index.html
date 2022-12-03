@@ -17,6 +17,7 @@
             <th scope="col">Email Address </th>
             <th scope="col">Created </th>
             <th scope="col">Updated </th>
+            <th scope="col">Actions </th>
         </thead>
         {% for user in info %}
         <tr>   
@@ -26,8 +27,12 @@
             <td>{{user.email}}</td>
             <td>{{user.created_at}}</td>
             <td>{{user.updated_at}}</td>
+            <td><a href="/show/{{user.id}}">Show</a></td>
+            <td><a href="/edit/{{user.id}}">Edit</a></td>
+            <td><a href="/delete/{{user.id}}">Delete</a></td>
         </tr>
         {% endfor %}
+
     </table>
     <form action="/create" method="get" class="text-center">
         <input class="btn btn-outline-secondary" type="submit" value="Create A User">
