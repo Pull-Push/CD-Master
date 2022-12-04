@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>All Users</title>
+</head>
+<body>
+    <h1 class="display-4 text-center">All Users</h1>
+    <table class="table table-striped">
+        <thead>
+            <th scope="col" class="table-dark">ID </th>
+            <th scope="col">First Name </th>
+            <th scope="col">Last Name </th>
+            <th scope="col">Email Address </th>
+            <th scope="col">Created </th>
+            <th scope="col">Updated </th>
+            <th scope="col">Actions </th>
+        </thead>
+        {% for user in info %}
+        <tr>   
+            <td class="table-dark">{{user.id}}</td>
+            <td>{{user.first_name}}</td>
+            <td>{{user.last_name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.created_at}}</td>
+            <td>{{user.updated_at}}</td>
+            <td><a href="/show/{{user.id}}">Show</a></td>
+            <td><a href="/edit/{{user.id}}">Edit</a></td>
+            <td><a href="/delete/{{user.id}}">Delete</a></td>
+        </tr>
+        {% endfor %}
+
+    </table>
+    <form action="/create" method="get" class="text-center">
+        <input class="btn btn-outline-secondary" type="submit" value="Create A User">
+    </form>
+</body>
+</html>
