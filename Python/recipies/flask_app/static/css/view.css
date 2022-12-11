@@ -1,0 +1,67 @@
+body{
+    background: no-repeat center center fixed #8B0000;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(121,9,9,1) 91%, rgba(149,0,0,1) 100%);
+    height:1200px;
+    margin-left: 25px;
+    text-align: center;
+}
+.headerbar, .subtitle{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+a{
+    margin-left: 15px;
+
+}
+h1{
+    margin: 15px;
+    padding: 25px;
+    color: whitesmoke;
+}
+h2 {
+    color: gold;
+}
+h3{
+    color: whitesmoke;
+    margin-left: 12.5%;
+}
+form{
+    width: 75%;
+    display: flex;
+    justify-content: space-around;
+    margin:0 auto
+}
+.left, .right{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    color: whitesmoke;
+    margin-top: 15px;
+}
+.radios{
+    margin-bottom: 25px;
+}
+#under{
+    margin-top: 25px;
+    margin-bottom: -10px;
+    
+}
+.radiolab{
+    margin-left: 10px;
+}
+.recinfo{
+    display: flex;
+    border: 1px solid whitesmoke;
+    justify-content: space-around;
+    width: 66%;
+    margin: 25px auto;
+    color: lightgrey;
+}
+p{
+    color:goldenrod;
+}
+.rec{
+    color: ghostwhite;
+}
